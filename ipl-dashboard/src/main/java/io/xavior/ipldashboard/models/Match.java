@@ -17,7 +17,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Entity(name = "match")
+@Entity(name = "Match")
 public class Match {
 
     @Id
@@ -25,6 +25,7 @@ public class Match {
     private long id;
     private String city;
     private LocalDate date;
+    private String season;
     private String playerOfMatch; 
     private String venue;
     private String team1;

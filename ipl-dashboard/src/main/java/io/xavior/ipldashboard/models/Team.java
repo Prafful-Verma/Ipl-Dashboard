@@ -16,7 +16,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Entity(name = "team")
+@Entity(name = "Team")
 public class Team {
 
     @Id

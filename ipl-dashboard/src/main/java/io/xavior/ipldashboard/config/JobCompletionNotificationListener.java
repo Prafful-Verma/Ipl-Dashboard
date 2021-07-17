@@ -39,7 +39,7 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
       // Find Total Matches
       // Total Matches as Team1
       List<Object[]> TeamCountAsFirst = entityManager
-          .createQuery("SELECT team1, COUNT(*) FROM match GROUP BY team1", Object[].class).getResultList();
+          .createQuery("SELECT team1, COUNT(*) FROM Match GROUP BY team1", Object[].class).getResultList();
       for (Object[] itr : TeamCountAsFirst) {
         String teamName = (String) itr[0];
         Long totalcount1 = (Long) itr[1];
@@ -49,7 +49,7 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
 
       // Total Matches as Team2
       List<Object[]> TeamCountAsSecond = entityManager
-          .createQuery("SELECT team2, COUNT(*) FROM match GROUP BY team2", Object[].class).getResultList();
+          .createQuery("SELECT team2, COUNT(*) FROM Match GROUP BY team2", Object[].class).getResultList();
       for (Object[] itr : TeamCountAsSecond) {
         String teamName = (String) itr[0];
         Long totalcount2 = (Long) itr[1];
@@ -64,7 +64,7 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
 
       // Find Total Wins
       List<Object[]> WinTeamCount = entityManager
-          .createQuery("SELECT matchWinner, COUNT(*) FROM match GROUP BY matchWinner", Object[].class).getResultList();
+          .createQuery("SELECT matchWinner, COUNT(*) FROM Match GROUP BY matchWinner", Object[].class).getResultList();
       for (Object[] itr : WinTeamCount) {
         String teamName = (String) itr[0];
         Long wincount1 = (Long) itr[1];
