@@ -37,4 +37,18 @@ public class TeamNameController {
         return team;
     }
 
+
+    @GetMapping(value="/totalMatches/{matches}")
+    public List<Team> getTeamsByTotalMaches(@PathVariable("matches") Long matches) {
+        List<Team> teams = teamRepository.getTeamByTotalMatches(matches);
+        return teams;   
+    }
+
+    @GetMapping(value="/totalMatches/{matches}&&{wins}")
+    public List<Team> getTeamsByTotalMachesandtotalWin(@PathVariable("matches") Long matches, @PathVariable("wins") Long wins) {
+        List<Team> teams = teamRepository.getTeamByTotalMatchesandTotalWins(matches,wins);
+        return teams;   
+    }
+    
+
 }
