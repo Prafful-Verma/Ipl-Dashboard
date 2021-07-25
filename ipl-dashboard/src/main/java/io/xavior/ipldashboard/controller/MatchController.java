@@ -3,6 +3,7 @@ package io.xavior.ipldashboard.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import io.xavior.ipldashboard.repository.MatchRepository;
 
 @RestController
 @RequestMapping("/match")
+@CrossOrigin
 public class MatchController {
     
     private MatchRepository matchRepository;
@@ -41,7 +43,6 @@ public class MatchController {
     public List<Match> getMatchbySeason(@PathVariable("season") String season){
         return matchRepository.findBySeason(season);
     }
-
 
 
 }
