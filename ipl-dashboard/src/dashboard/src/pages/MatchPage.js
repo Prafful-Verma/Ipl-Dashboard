@@ -17,7 +17,7 @@ export const MatchPage = () => {
 
                 const getMatches = async () => {
 
-                    const response = await fetch(`http://localhost:8080/team/${teamName}/matches?year=${year}`);
+                    const response = await fetch(`/team/${teamName}/matches?year=${year}`);
                     const data = await response.json();
                     setMatches(data);
                 };

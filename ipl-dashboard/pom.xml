@@ -15,7 +15,7 @@
 	<name>ipl-dashboard</name>
 	<description>Demo project for Spring Boot with ipl Data</description>
 	<properties>
-		<java.version>16</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 
